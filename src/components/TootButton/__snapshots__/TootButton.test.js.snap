@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TootButton /> renders as expected 1`] = `
+<button
+  className="btn"
+>
+  Toot
+</button>
+`;

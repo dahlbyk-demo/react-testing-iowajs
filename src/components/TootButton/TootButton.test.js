@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import TootButton from './TootButton';
 
@@ -22,5 +23,12 @@ describe('<TootButton />', () => {
     button.simulate('click');
 
     expect(mockClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders as expected', () => {
+    let obj = renderer.create(<TootButton />).toJSON();
+    // console.log(obj);
+
+    expect(obj).toMatchSnapshot();
   });
 });

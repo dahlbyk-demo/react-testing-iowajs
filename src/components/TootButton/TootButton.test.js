@@ -12,6 +12,7 @@ describe('<TootButton />', () => {
 
     expect(button.text()).toBe('Toot');
     expect(button.hasClass('btn')).toBe(true);
+    expect(button.hasClass('btn-primary')).toBe(true);
   });
 
   it('calls onClick prop on click', () => {

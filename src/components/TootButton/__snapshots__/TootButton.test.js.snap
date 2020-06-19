@@ -2,7 +2,7 @@
 
 exports[`<TootButton /> renders as expected 1`] = `
 <button
-  className="btn"
+  className="btn btn-primary"
 >
   Toot
 </button>

@@ -1,3 +1,3 @@
-import TootButton from '/.TootButton';
+import TootButton from './TootButton';
 
 export default TootButton;

@@ -3,6 +3,8 @@
 exports[`<TootButton /> renders as expected 1`] = `
 <button
   className="btn btn-primary"
+  data-testid="toot-button"
+  onClick={[Function]}
 >
   Toot
 </button>

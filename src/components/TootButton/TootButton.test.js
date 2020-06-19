@@ -13,9 +13,11 @@ describe('<TootButton />', () => {
     expect(button.text()).toBe('Toot');
     expect(button.hasClass('btn')).toBe(true);
     expect(button.hasClass('btn-primary')).toBe(true);
+
+    expect(app.state('clicks')).toBe(0);
   });
 
-  it('calls onClick prop on click', () => {
+  it('calls onClick prop on click and counts clicks', () => {
     let mockClick = jest.fn();
 
     let app = shallow(<TootButton onClick={mockClick} />);
@@ -24,6 +26,11 @@ describe('<TootButton />', () => {
     button.simulate('click');
 
     expect(mockClick).toHaveBeenCalledTimes(1);
+    expect(app.state('clicks')).toBe(1);
+
+    // Demo
+    expect(app.state('person')).toHaveProperty('firstName', 'Keith');
+    expect(app.state('person').firstName).toBe('Keith');
   });
 
   it('renders as expected', () => {

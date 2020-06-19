@@ -27,6 +27,8 @@ describe('<TootButton />', () => {
   });
 
   it('renders as expected', () => {
+    // Also possible with enzyme? https://github.com/adriantoine/enzyme-to-json
+
     let obj = renderer.create(<TootButton />).toJSON();
     // console.log(obj);
 
